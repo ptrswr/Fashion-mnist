@@ -55,7 +55,7 @@ Imagine we have an image that is an 2D array of 6x6 pixels.
 The idea of a Convolutional Layer is to essentially create another grid of layers known as the kernel or filter.
 So for example we have an 6x6 image and 3x3 kernel to filter the image. We are applying the kernel over the regions of the image
 and performing kernel convolution over pixels.
-Convolution is an operation of multiplying corresponding kernel and pixels values, summing them up and passing to another array called convoluted array.
+Convolution is an operation of multiplying corresponding kernel and pixels values, summing them up and passing to another array of pixels.
 
 ![](img/conv.png)
 
@@ -97,7 +97,9 @@ using MaxPooling2D layer with 2x2 sized grid and a stride of 2.
 **Conv2D & MaxPooling2D**
 
 With reduced size images we  are passing them once again to the convolutional layer. It will return 64 same sized images that are later reduced in size by same as before MaxPooling2D layer.
+
 **Dense Layers**
+
 With our preprocessed images we are passing them to our dense layers. Firstly we must transform the 28x28 array to 1D array of 784 pixels. After the pixels are flattened, the network consists of a sequence of two dense layers. These are densely connected, or fully connected, neural layers. The first Dense layer has 128 nodes (or neurons). The second layer returns a logits array with length of 10. Each node contains a score that indicates the current image belongs to one of the 10 classes. We are also using here the softmax activation function that will help to display the probabilities.
 
 ### Compile and training
@@ -134,7 +136,7 @@ Using developed model I reached up to 0.9224 accuracy with circa ~0.254 loss on 
 
 ![](img/result.png)
 
-Official benchmark result site doesn't really include a result of training with Convolutional Neural Network but referring to untested but submitted benchmarks visible on fashion_mnist github we can see some examples of CNN models and their results.
+Official benchmark result site doesn't really include a result of training with Convolutional Neural Network but referring to untested but submitted benchmarks visible on [fashion_mnist github](https://github.com/zalandoresearch/fashion-mnist) we can see some examples of CNN models and their results.
 In comparison to exemplary benchmark - CNN with 2 Conv and pooling I received similar results.
 
 
@@ -154,7 +156,7 @@ In order to run the program following python libraries should be installed:
 * keras.datasets
 
 Data is loaded directly from imported tensorflow.datasets package.
-The program is written with python using Anaconda environment.
+The program is written with python using Anaconda interpreter.
 Python in version 3.7 is necessary to run it.
 File cnn.py can be executed in console or any python framework like for example PyCharm.
 
