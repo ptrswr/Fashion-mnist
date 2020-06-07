@@ -61,7 +61,7 @@ Convolution is an operation of multiplying corresponding kernel and pixels value
 
 Maxpooling is essentially reducing the size of an input image by summarizing regions. In order to perform maxpooling, we need to select two things: a grid, which would be the pool size, and a stride. We are scanning the image with our grid and choosing the greatest value within. The stride describes how many pixels the grid should slide across the image with each step.
 
-![](img/pooling.png)
+![](img/pooling.jpeg)
 
 Before passing the data to the model we should reshape it in order to pass it to Convolution Layer.
 
@@ -126,7 +126,7 @@ model.fit(X_train,
 We are training the model in 10 epochs, using 64 sized batches. Batch size describes number of samples per gradient update.
 
 ### Sources
-Developing my network, I based on Tensorflow documentation, and non tested benchmarks on fashion_mnist github. At the beginning I developed simple deep neural network similar to shown on [Tensorflow tutorial](https://www.tensorflow.org/tutorials/keras/classification) and I reached quite good percentage of accuracy (~86%) but shortly after I decided to develop something more complex.
+Developing my network, I based on Tensorflow documentation, non tested benchmarks on  [fashion_mnist github](https://github.com/zalandoresearch/fashion-mnist) and bunch of articles describing usage of deep neural networks in this particular problem, for example article on [medium.com](https://medium.com/@ipylypenko/exploring-neural-networks-with-fashion-mnist-b0a8214b7b7b). At the beginning I developed simple deep neural network similar to shown on [Tensorflow tutorial](https://www.tensorflow.org/tutorials/keras/classification) and I reached quite good percentage of accuracy (~86%) but shortly after I decided to develop something more complex.
 
 ## Results
 
