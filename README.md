@@ -1,6 +1,7 @@
-#Fashion-MNIST 
+# Fashion-MNIST 
 
 Fashion-MNIST Image Classifying Model
+
 ## Introduction
 
 FashionMnist dataset is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. The images are 28x28 NumPy arrays, with pixel values ranging from 0 to 255. The labels are an array of integers, ranging from 0 to 9.
@@ -29,7 +30,8 @@ I decided to use convolutional neural network (CNN) to solve the problem.
 ## Methods
 I've decide to use Tensorflow library to develop my network.
 
-###Loading the dataset
+### Loading the dataset
+
 FashionMnist dataset exists in one of keras bulit-in datasets so I imported it from the package.
 ```
 from keras.datasets import fashion_mnist
@@ -128,10 +130,12 @@ Developing my network, I based on Tensorflow documentation, and non tested bench
 Using developed model I reached up 0.9224 accuracy with circa ~0.254 loss on my test data.
 
 
+
 ![](img/result.png)
 
 Official benchmark result site doesn't really include a result of training with Convolutional Neural Network but referring to untested but submitted benchmarks visible on fashion_mnist github we can see some examples of CNN models and their results.
 In comparison to exemplary benchmark - CNN with 2 Conv and pooling I received similar results.
+
 
 | Classifier | Preprocessing | Fashion test accuracy | Author |
 | --- | --- | --- | ---|
