@@ -1,7 +1,6 @@
-# Project Title
+#Fashion-MNIST 
 
 Fashion-MNIST Image Classifying Model
-
 ## Introduction
 
 FashionMnist dataset is a dataset of Zalando's article images—consisting of a training set of 60,000 examples and a test set of 10,000 examples. Each example is a 28x28 grayscale image, associated with a label from 10 classes. The images are 28x28 NumPy arrays, with pixel values ranging from 0 to 255. The labels are an array of integers, ranging from 0 to 9.
@@ -38,7 +37,7 @@ from keras.datasets import fashion_mnist
 ((X_train, y_train), (X_test, y_test)) = fashion_mnist.load_data()
 
 ```
-###Preprocessing the data
+### Preprocessing the data
 
 The data must be preprocessed before training the network. Because the pixel values fall in the range of 0 to 255 I simply divided them by 255 to scale them to range of 0 to 1.
 ``` X_train = X_train.astype('float32')/255
@@ -98,7 +97,8 @@ With reduced size images we  are passing them once again to the convolutional la
 **Dense Layers**
 With our preprocessed images we are passing them to our dense layers. Firstly we must transform the 28x28 array to 1D array of 784 pixels. After the pixels are flattened, the network consists of a sequence of two dense layers. These are densely connected, or fully connected, neural layers. The first Dense layer has 128 nodes (or neurons). The second layer returns a logits array with length of 10. Each node contains a score that indicates the current image belongs to one of the 10 classes. We are also using here the softmax activation function that will help to display the probabilities.
 
-###Compile and training
+### Compile and training
+
 **Compile**
 ```
 model.compile(optimizer='adam',
@@ -120,12 +120,13 @@ model.fit(X_train,
 ```
 We are training the model in 10 epochs, using 64 sized batches. Batch size describes number of samples per gradient update.
 
-###Sources
+### Sources
 Developing my network, I based on Tensorflow documentation, and non tested benchmarks on fashion_mnist github. At the beginning I developed simple deep neural network similar to shown on [Tensorflow tutorial](https://www.tensorflow.org/tutorials/keras/classification) and I reached quite good percentage of accuracy (~86%) but shortly after I decided to develop something more complex.
 
-##Results
+## Results
 
 Using developed model I reached up 0.9224 accuracy with circa ~0.254 loss on my test data.
+
 
 ![](img/result.png)
 
@@ -133,13 +134,15 @@ Official benchmark result site doesn't really include a result of training with 
 In comparison to exemplary benchmark - CNN with 2 Conv and pooling I received similar results.
 
 | Classifier | Preprocessing | Fashion test accuracy | Author |
+| --- | --- | --- | ---|
 |2 Conv+pooling | None | 0.876 | - | [Kashif Rasul](https://twitter.com/krasul)|
 |2 Conv+pooling | None | 0.916| - |[Tensorflow's doc](https://www.tensorflow.org/tutorials/layers) |
 |2 Conv+pooling+ELU activation (PyTorch)| None| 0.903| - | [@AbhirajHinge](https://github.com/AbhirajHinge) |
 |2 Conv | Normalization, random horizontal flip, random vertical flip, random translation, random rotation. | 0.919 |[Kyriakos Efthymiadis](https://github.com/kefth)|
 |2 Conv+pooling | Normalization | 0.9224 | [Piotr Swirkaitis](https://github.com/ptrswr)|
 
-##Usage
+## Usage
+
 In order to run the program following python libraries should be installed:
 * tensorflow
 * keras from tensorflow
