@@ -51,9 +51,9 @@ The data must be preprocessed before training the network. Because the pixel val
 Convolutional Neural Networks are essentially a type of neural network that is more accurate than regular Deep Neural Networks.
 The two main concepts of this algorithm are Convolutions and Maxpooling.
 
-Imagine we have an image that is an 2D array of 6x6 pixels.
+Imagine we have an image that is an 2D array of 5x5 pixels.
 The idea of a Convolutional Layer is to essentially create another grid of layers known as the kernel or filter.
-So for example we have an 6x6 image and 3x3 kernel to filter the image. We are applying the kernel over the regions of the image
+So for example we have an 5x5 image and 3x3 kernel to filter the image. We are applying the kernel over the regions of the image
 and performing kernel convolution over pixels.
 Convolution is an operation of multiplying corresponding kernel and pixels values, summing them up and passing to another array of pixels.
 
