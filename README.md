@@ -50,6 +50,7 @@ The data must be preprocessed before training the network. Because the pixel val
 
 Convolutional Neural Networks are essentially a type of neural network that is more accurate than regular Deep Neural Networks.
 The two main concepts of this algorithm are Convolutions and Maxpooling.
+
 Imagine we have an image that is an 2D array of 6x6 pixels.
 The idea of a Convolutional Layer is to essentially create another grid of layers known as the kernel or filter.
 So for example we have an 6x6 image and 3x3 kernel to filter the image. We are applying the kernel over the regions of the image
@@ -84,7 +85,7 @@ model = keras.Sequential([
        keras.layers.Dense(10, activation='softmax')
    ])
 ```
-After many attempts and test my model finally consists 2 Convolutional layers, 2 pooling layers and 2 Dense layers.
+After many attempts and tests my model finally consists 2 Convolutional layers, 2 pooling layers and 2 Dense layers.
 
 **Conv2D & MaxPooling2D**
 
@@ -127,7 +128,7 @@ Developing my network, I based on Tensorflow documentation, and non tested bench
 
 ## Results
 
-Using developed model I reached up 0.9224 accuracy with circa ~0.254 loss on my test data.
+Using developed model I reached up to 0.9224 accuracy with circa ~0.254 loss on my test data.
 
 
 
@@ -139,9 +140,9 @@ In comparison to exemplary benchmark - CNN with 2 Conv and pooling I received si
 
 | Classifier | Preprocessing | Fashion test accuracy | Author |
 | --- | --- | --- | ---|
-|2 Conv+pooling | None | 0.876 | - | [Kashif Rasul](https://twitter.com/krasul)|
-|2 Conv+pooling | None | 0.916| - |[Tensorflow's doc](https://www.tensorflow.org/tutorials/layers) |
-|2 Conv+pooling+ELU activation (PyTorch)| None| 0.903| - | [@AbhirajHinge](https://github.com/AbhirajHinge) |
+|2 Conv+pooling | None | 0.876 | [Kashif Rasul](https://twitter.com/krasul)|
+|2 Conv+pooling | None | 0.916 |[Tensorflow's doc](https://www.tensorflow.org/tutorials/layers) |
+|2 Conv+pooling+ELU activation (PyTorch)| None| 0.903 | [@AbhirajHinge](https://github.com/AbhirajHinge) |
 |2 Conv | Normalization, random horizontal flip, random vertical flip, random translation, random rotation. | 0.919 |[Kyriakos Efthymiadis](https://github.com/kefth)|
 |2 Conv+pooling | Normalization | 0.9224 | [Piotr Swirkaitis](https://github.com/ptrswr)|
 
